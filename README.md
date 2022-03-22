@@ -1,3 +1,5 @@
+# postcss-flex-value
+
 `postcss-flex-value` is a plugin of [postcss](https://postcss.org/), it transforms flex's "start" to "flex-start" to avoid issue like [start value has mixed support, consider using flex-start instead](https://github.com/mozilla/addons-frontend/issues/7312)
 
 ## Install
@@ -12,9 +14,9 @@ yarn add -D postcss-flex-value
 
 ```css
 .a {
-    display: flex;
-    justify-content: start;
-    align-items: end;
+  display: flex;
+  justify-content: start;
+  align-items: end;
 }
 ```
 
@@ -22,9 +24,9 @@ yarn add -D postcss-flex-value
 
 ```css
 .a {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 ```
 
@@ -40,20 +42,20 @@ postcss([require('postcss-flex-value')]);
 
 ```js
 module.exports = {
-    module: {
-        rules: [
-            {
-                test: /\.(less|css)$/,
-                use: [{
-                    loader: require.resolve('postcss-loader'),
-                    options: {
-                        postcssOptions: {
-                            plugins: require('postcss-flex-value')
-                        }
-                    }
-                }]
+  module: {
+    rules: [
+      {
+        test: /\.(less|css)$/,
+        use: [{
+          loader: require.resolve('postcss-loader'),
+          options: {
+            postcssOptions: {
+              plugins: require('postcss-flex-value')
             }
-        ]
-    }
+          }
+        }]
+      }
+    ]
+  }
 }
 ```
