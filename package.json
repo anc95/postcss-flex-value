@@ -1,6 +1,8 @@
 {
   "name": "postcss-flex-value",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/anc95/postcss-flex-value.git",
+  "author": "anc95"
 }
